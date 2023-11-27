@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sec_transfer_app/style.css' %}">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'desencriptar_archivo' %}">Desencriptar Archivo</a></li>
+        <li><a href="{% url 'enviar_correo' %}">Enviar Correo</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
